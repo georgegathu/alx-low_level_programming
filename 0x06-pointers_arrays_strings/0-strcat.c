@@ -1,16 +1,16 @@
 #include "main.h"
-/*
- *  _strcat - used to concatenate two strings
- *  @dest: used to input value
- *  @src: used to input value
+/**
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- *  Return: void
- **/
+ * Return: void
+ */
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	int j:
-	
+	int j;
+
 	i = 0;
 	while (dest[i] != '\0')
 	{
