@@ -1,5 +1,4 @@
-#include <main.h>
-
+#include "main.h"
 /*
  *  _strcat - used to concatenate two strings
  *  @dest: used to input value
@@ -7,7 +6,6 @@
  *
  *  Return: void
  **/
-
 char *_strcat(char *dest, char *src)
 {
 	int i;
