@@ -1,28 +1,25 @@
 #include "main.h"
-/**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
- */
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int n = 0;
-	int r;
 
-	while (*s)
+/**
+ * _strbrk - search a string for any of a set of bytes
+ * @s: string to cheeck
+ * @accept: string to check against
+ *
+ * Return: pointer to byte in s that matches or NULL if no match
+ */
+char *_strbrk(char *s, char *accept)
+{
+	unsigned int i, j;
+
+	for (i = 0; s[i]; i++)
 	{
-		for (r = 0; accept[r]; r++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (*s == accept[r])
-			{
-				n++;
+			if (s[i] == accept[j])
 				break;
-			}
-			else if (accept[r + 1] == '\0')
-				return (n);
 		}
-		s++;
+		if (accept[j])
+			return (s + i);
 	}
-	return (n);
+	return (0);
 }
