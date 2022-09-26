@@ -7,19 +7,19 @@
  *
  * Return: pointer to byte in s that matches or NULL if no match
  */
-char *_strbrk(char *s, char *accept)
-{
-	unsigned int i, j;
 
-	for (i = 0; s[i]; i++)
+char *_strpbrk(char *s, char *accept)
+{
+	int k;
+
+	while (*s)
 	{
-		for (j = 0; accept[j]; j++)
+		for (k = 0; accept[k]; k++)
 		{
-			if (s[i] == accept[j])
-				break;
+			if (*s == accept[k])
+				return (s);
 		}
-		if (accept[j])
-			return (s + i);
+		s++
 	}
 	return (0);
 }
